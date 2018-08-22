@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @hotel.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @hotel.descripcion %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @hotel.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @hotel.telefono %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @hotel.email %>
+</p>
+
+<p>
+  <strong>Fotos:</strong>
+  <% @hotel.fotos.each do |h| %>
+    <%= image_tag(h.thumb.url, alt: 'foto') %> <emsp/>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+<%= link_to 'Back', hotels_path %>
