@@ -2,7 +2,7 @@
   <div>
     <% @hotel.fotos.each_with_index do |image, ind| %>
       <%= check_box_tag("remove_images[]", ind) %>
-      <%= link_to(image_tag(image.thumb.url), url: image.url, target: '_blank') %> <emsp/>
+      <%= link_to(image_tag(image.thumb.url), image.url, target: '_blank') %> <emsp/>
     <% end -%>
   </div>
   <div>
