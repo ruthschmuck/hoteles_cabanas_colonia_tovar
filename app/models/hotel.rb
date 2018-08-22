@@ -20,4 +20,8 @@ class Hotel < ApplicationRecord
   validates :telefono, presence: true
 
   mount_uploaders :fotos, FotoUploader
+
+  before_create do
+    self.nombre = nombre.split(' ').collect(&:capitalize).join(' ')
+  end
 end

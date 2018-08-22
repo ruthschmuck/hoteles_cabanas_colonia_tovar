@@ -32,7 +32,6 @@ class HotelsController < ApplicationController
   # POST /hotels.json
   def create
     @hotel = Hotel.new(hotel_params)
-    @hotel.nombre = @hotel.nombre.split(' ').collect(&:capitalize).join(' ')
     respond_to do |format|
       if @hotel.save
         format.html { redirect_to @hotel, notice: 'Hotel was successfully created.' }
