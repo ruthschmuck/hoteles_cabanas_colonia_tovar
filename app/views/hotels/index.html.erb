@@ -10,7 +10,6 @@
       <th>Direccion</th>
       <th>Telefono</th>
       <th>Email</th>
-      <th>Fotos</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +22,9 @@
         <td><%= hotel.direccion %></td>
         <td><%= hotel.telefono %></td>
         <td><%= hotel.email %></td>
-        <td><%= image_tag(hotel.fotos.first.thumb.url, alt: 'Imagen') %></td>
+        <% if hotel.fotos? %>
+          <td><%= image_tag(hotel.fotos.first.thumb.url, alt: 'Imagen') %></td>
+        <% end -%>
         <td><%= link_to 'Show', hotel %></td>
         <td><%= link_to 'Edit', edit_hotel_path(hotel) %></td>
         <td><%= link_to 'Destroy', hotel, method: :delete, data: { confirm: 'Are you sure?' } %></td>

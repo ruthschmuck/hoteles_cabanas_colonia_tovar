@@ -1,4 +1,7 @@
-<%= form_for(@hotel, url: hotel_fotos_path(@hotel), method: :post) do |f| %> 
+<%= form_for(@hotel, url: hotel_fotos_path(@hotel), method: :post) do |f| %>
+  <% @hotel.fotos.each do |h| %>
+    <%= link_to(image_tag(h.thumb.url, alt: 'foto'), url: h.url, target: '_blank') %> <emsp/>
+  <% end %>
   <div class= "field">
     <%= f.file_field :fotos, multiple: true %>
   </div>

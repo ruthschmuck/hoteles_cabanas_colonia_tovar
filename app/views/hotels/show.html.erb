@@ -28,7 +28,7 @@
 <p>
   <strong>Fotos:</strong>
   <% @hotel.fotos.each do |h| %>
-    <%= image_tag(h.thumb.url, alt: 'foto') %> <emsp/>
+    <%= link_to(image_tag(h.thumb.url, alt: 'foto'), url: h.url, target: '_blank') %> <emsp/>
   <% end %>
 </p>
 

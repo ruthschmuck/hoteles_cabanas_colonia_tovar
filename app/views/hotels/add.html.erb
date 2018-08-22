@@ -1,7 +1,4 @@
 <h1>Agregar más fotos a la galería</h1>
-<% @hotel.fotos.each do |h| %>
-  <%= image_tag(h.thumb.url, alt: 'foto') %> <emsp/>
-<% end %>
 
 <%= render 'add_fotos', object: @hotel %>
 
