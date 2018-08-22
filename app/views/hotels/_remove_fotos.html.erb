@@ -1,0 +1,7 @@
+<%= form_tag(hotel_foto_path(@hotel), method: :DELETE) do %>
+  <% @hotel.fotos.each_with_index do |image, ind| %>
+    <%= check_box_tag("remove_images[]", ind) %>
+    <%= image_tag(image.thumb.url) %>
+  <% end -%>
+  <%= submit_tag "Eliminar imagenes" %>
+<% end -%>

@@ -1,5 +1,6 @@
 class HotelsController < ApplicationController
-  before_action :set_hotel, only: [:show, :edit, :update, :destroy]
+  before_action :set_hotel, only: [:show, :add, :remove,
+                                   :edit, :update, :destroy]
 
   # GET /hotels
   # GET /hotels.json
@@ -19,6 +20,12 @@ class HotelsController < ApplicationController
 
   # GET /hotels/1/edit
   def edit
+  end
+
+  def add
+  end
+
+  def remove
   end
 
   # POST /hotels

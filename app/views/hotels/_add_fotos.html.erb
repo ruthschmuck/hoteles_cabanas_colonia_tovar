@@ -1,0 +1,9 @@
+<%= form_for(@hotel, url: hotel_fotos_path(@hotel), method: :post) do |f| %> 
+  <div class= "field">
+    <%= f.file_field :fotos, multiple: true %>
+  </div>
+  <div class="actions"> 
+    <!-- disabled: f.file_field([],) -->
+    <%= f.submit "Agregar Fotos" %>
+  </div>
+<% end -%>

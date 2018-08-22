@@ -32,5 +32,7 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
-<%= link_to 'Back', hotels_path %>
+<%= link_to 'Editar', edit_hotel_path(@hotel) %> |
+<%= link_to 'Agregar mas fotos', add_fotos_path(@hotel) %> |
+<%= link_to 'Eliminar fotos', remove_fotos_path(@hotel) %> |
+<%= link_to 'Atrás', hotels_path %>
