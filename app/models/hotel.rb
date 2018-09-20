@@ -21,6 +21,7 @@ class Hotel < ApplicationRecord
 
   mount_uploaders :fotos, FotoUploader
 
+  #
   before_create do
     self.nombre = nombre.split(' ').collect(&:capitalize).join(' ')
   end
